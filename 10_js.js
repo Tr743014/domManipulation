@@ -1,5 +1,5 @@
 // Shows the filter form and hides the add-article form
-// Ensures only one menu (filter or add) is visible at a time
+// One menu is visible at a time
 function showFilter() {
     const filter = document.getElementById("filterContent");
     const add = document.getElementById("newContent");
@@ -9,7 +9,7 @@ function showFilter() {
 }
 
 // Shows the add-article form and hides the filter form
-// Uses flex display to preserve form layout styling
+// Flex display for form layout styling
 function showAddNew() {
     const filter = document.getElementById("filterContent");
     const add = document.getElementById("newContent");
@@ -18,9 +18,9 @@ function showAddNew() {
     filter.style.display = "none";
 }
 
-// Filters visible articles based on which checkboxes are checked.
-// Loops through all articles and toggles their display
-// depending on whether their type (class) is enabled.
+// Filters visible articles based on checkboxes checked.
+// Toggle article displays
+// Class is enabled depending on type
 function filterArticles() {
     const showOpinion = document.getElementById("opinionCheckbox").checked;
     const showRecipe = document.getElementById("recipeCheckbox").checked;
@@ -42,13 +42,13 @@ function filterArticles() {
 }
 
 // Add New Article
-// Creates and adds a new article to the page.
-// 1. Reads user input (title, text, selected type).
-// 2. Validates all required fields are filled.
-// 3. Determines article class and label.
-// 4. Dynamically builds the <article> structure.
-// 5. Appends it to the article list.
-// 6. Clears the form for the next entry.
+// Creates and adds a new article to the page
+// 1. Reads user input 
+// 2. Validates all required fields
+// 3. Determines article class and label
+// 4. Builds the structure
+// 5. Appends it to the article list
+// 6. Clears the form for the next entry
 function addNewArticle() {
 
     const title = document.getElementById("inputHeader").value;
@@ -110,4 +110,5 @@ function addNewArticle() {
     document.getElementById("opinionRadio").checked = false;
     document.getElementById("recipeRadio").checked = false;
     document.getElementById("lifeRadio").checked = false;
+
 }
